@@ -1,0 +1,727 @@
+.yplayer {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .07), 0 1px 5px 0 rgba(0, 0, 0, .1);
+    border-radius: 2px;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    line-height: normal;
+    position: relative
+}
+
+.yplayer * {
+    box-sizing: content-box
+}
+
+.yplayer svg {
+    width: 100%;
+    height: 100%
+}
+
+.yplayer svg circle,
+.yplayer svg path {
+    fill: #fff
+}
+
+.yplayer.yplayer-withlist .yplayer-info {
+    border-bottom: 1px solid #e9e9e9
+}
+
+.yplayer.yplayer-withlist .yplayer-list {
+    display: block
+}
+
+.yplayer.yplayer-withlist .yplayer-icon-order,
+.yplayer.yplayer-withlist .yplayer-info .yplayer-controller .yplayer-time .yplayer-icon.yplayer-icon-menu {
+    display: inline
+}
+
+.yplayer.yplayer-withlrc .yplayer-pic {
+    height: 90px;
+    width: 90px
+}
+
+.yplayer.yplayer-withlrc .yplayer-info {
+    margin-left: 90px;
+    height: 90px;
+    padding: 10px 7px 0
+}
+
+.yplayer.yplayer-withlrc .yplayer-lrc {
+    display: block
+}
+
+.yplayer.yplayer-narrow {
+    width: 66px
+}
+
+.yplayer.yplayer-narrow .yplayer-info,
+.yplayer.yplayer-narrow .yplayer-list {
+    display: none
+}
+
+.yplayer.yplayer-narrow .yplayer-body,
+.yplayer.yplayer-narrow .yplayer-pic {
+    height: 66px;
+    width: 66px
+}
+
+.yplayer.yplayer-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    z-index: 99;
+    overflow: visible;
+    max-width: 400px;
+    box-shadow: none
+}
+
+.yplayer.yplayer-fixed .yplayer-list {
+    margin-bottom: 65px;
+    border: 1px solid #eee;
+    border-bottom: none
+}
+
+.yplayer.yplayer-fixed .yplayer-body {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    z-index: 99;
+    background: #fff;
+    padding-right: 18px;
+    transition: all .3s ease;
+    max-width: 400px
+}
+
+.yplayer.yplayer-fixed .yplayer-lrc {
+    display: block;
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    z-index: 98;
+    pointer-events: none;
+    text-shadow: -1px -1px 0 #fff
+}
+
+.yplayer.yplayer-fixed .yplayer-lrc:after,
+.yplayer.yplayer-fixed .yplayer-lrc:before {
+    display: none
+}
+
+.yplayer.yplayer-fixed .yplayer-info {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    transition: all .3s ease;
+    border-bottom: none;
+    border-top: 1px solid #e9e9e9
+}
+
+.yplayer.yplayer-fixed .yplayer-info .yplayer-music {
+    width: calc(100% - 105px)
+}
+
+.yplayer.yplayer-fixed .yplayer-miniswitcher {
+    display: block
+}
+
+.yplayer.yplayer-fixed.yplayer-narrow .yplayer-info {
+    display: block;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0)
+}
+
+.yplayer.yplayer-fixed.yplayer-narrow .yplayer-body {
+    width: 66px!important
+}
+
+.yplayer.yplayer-fixed.yplayer-narrow .yplayer-miniswitcher .yplayer-icon {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0)
+}
+
+.yplayer.yplayer-fixed .yplayer-icon-back,
+.yplayer.yplayer-fixed .yplayer-icon-forward,
+.yplayer.yplayer-fixed .yplayer-icon-lrc,
+.yplayer.yplayer-fixed .yplayer-icon-play {
+    display: inline-block
+}
+
+.yplayer.yplayer-fixed .yplayer-icon-back,
+.yplayer.yplayer-fixed .yplayer-icon-forward,
+.yplayer.yplayer-fixed .yplayer-icon-menu,
+.yplayer.yplayer-fixed .yplayer-icon-play {
+    position: absolute;
+    bottom: 27px;
+    width: 20px;
+    height: 20px
+}
+
+.yplayer.yplayer-fixed .yplayer-icon-back {
+    right: 75px
+}
+
+.yplayer.yplayer-fixed .yplayer-icon-play {
+    right: 50px
+}
+
+.yplayer.yplayer-fixed .yplayer-icon-forward {
+    right: 25px
+}
+
+.yplayer.yplayer-fixed .yplayer-icon-menu {
+    right: 0
+}
+
+.yplayer.yplayer-arrow .yplayer-icon-loop,
+.yplayer.yplayer-arrow .yplayer-icon-order,
+.yplayer.yplayer-mobile .yplayer-icon-volume-down {
+    display: none
+}
+
+.yplayer.yplayer-loading .yplayer-info .yplayer-controller .yplayer-loading-icon {
+    display: block
+}
+
+.yplayer.yplayer-loading .yplayer-info .yplayer-controller .yplayer-bar-wrap .yplayer-bar .yplayer-played .yplayer-thumb {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+}
+
+.yplayer .yplayer-body {
+    position: relative
+}
+
+.yplayer .yplayer-icon {
+    width: 15px;
+    height: 15px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    opacity: .8;
+    vertical-align: middle;
+    padding: 0;
+    font-size: 12px;
+    margin: 0;
+    display: inline-block
+}
+
+.yplayer .yplayer-icon path {
+    transition: all .2s ease-in-out
+}
+
+.yplayer .yplayer-icon-back,
+.yplayer .yplayer-icon-forward,
+.yplayer .yplayer-icon-lrc,
+.yplayer .yplayer-icon-order,
+.yplayer .yplayer-icon-play {
+    display: none
+}
+
+.yplayer .yplayer-icon-lrc-inactivity svg {
+    opacity: .4
+}
+
+.yplayer .yplayer-icon-forward {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+.yplayer .yplayer-lrc-content {
+    display: none
+}
+
+.yplayer .yplayer-pic {
+    position: relative;
+    float: left;
+    height: 66px;
+    width: 66px;
+    background-size: cover;
+    background-position: 50%;
+    transition: all .3s ease;
+    cursor: pointer
+}
+
+.yplayer .yplayer-pic:hover .yplayer-button {
+    opacity: 1
+}
+
+.yplayer .yplayer-pic .yplayer-button {
+    position: absolute;
+    border-radius: 50%;
+    opacity: .8;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+    background: rgba(0, 0, 0, .2);
+    transition: all .1s ease
+}
+
+.yplayer .yplayer-pic .yplayer-button path {
+    fill: #fff
+}
+
+.yplayer .yplayer-pic .yplayer-hide {
+    display: none
+}
+
+.yplayer .yplayer-pic .yplayer-play {
+    width: 26px;
+    height: 26px;
+    border: 2px solid #fff;
+    bottom: 50%;
+    right: 50%;
+    margin: 0 -15px -15px 0
+}
+
+.yplayer .yplayer-pic .yplayer-play svg {
+    position: absolute;
+    top: 3px;
+    left: 4px;
+    height: 20px;
+    width: 20px
+}
+
+.yplayer .yplayer-pic .yplayer-pause {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #fff;
+    bottom: 4px;
+    right: 4px
+}
+
+.yplayer .yplayer-pic .yplayer-pause svg {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 12px;
+    width: 12px
+}
+
+.yplayer .yplayer-info {
+    margin-left: 66px;
+    padding: 14px 7px 0 10px;
+    height: 66px;
+    box-sizing: border-box
+}
+
+.yplayer .yplayer-info .yplayer-music {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 0 0 13px 5px;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    cursor: default;
+    padding-bottom: 2px;
+    height: 20px
+}
+
+.yplayer .yplayer-info .yplayer-music .yplayer-title {
+    font-size: 14px
+}
+
+.yplayer .yplayer-info .yplayer-music .yplayer-author {
+    font-size: 12px;
+    color: #666
+}
+
+.yplayer .yplayer-info .yplayer-controller {
+    position: relative;
+    display: flex
+}
+
+.yplayer .yplayer-info .yplayer-controller .yplayer-bar-wrap {
+    margin: 0 0 0 5px;
+    padding: 4px 0;
+    cursor: pointer!important;
+    flex: 1
+}
+
+.yplayer .yplayer-info .yplayer-controller .yplayer-bar-wrap:hover .yplayer-bar .yplayer-played .yplayer-thumb {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+}
+
+.yplayer .yplayer-info .yplayer-controller .yplayer-bar-wrap .yplayer-bar {
+    position: relative;
+    height: 2px;
+    width: 100%;
+    background: #cdcdcd
+}
+
+.yplayer .yplayer-info .yplayer-controller .yplayer-bar-wrap .yplayer-bar .yplayer-loaded {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: #aaa;
+    height: 2px;
+    transition: all .5s ease
+}
+
+.yplayer .yplayer-info .yplayer-controller .yplayer-bar-wrap .yplayer-bar .yplayer-played {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: 2px
+}
+
+.yplayer .yplayer-info .yplayer-controller .yplayer-bar-wrap .yplayer-bar .yplayer-played .yplayer-thumb {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    margin-top: -4px;
+    margin-right: -10px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    -webkit-transform: scale(0);
+    transform: scale(0)
+}
+
+.yplayer .yplayer-info .yplayer-controller .yplayer-time {
+    position: relative;
+    right: 0;
+    bottom: 4px;
+    height: 17px;
+    color: #999;
+    font-size: 11px;
+    padding-left: 7px
+}
+
+.yplayer .yplayer-info .yplayer-controller .yplayer-time .yplayer-time-inner {
+    vertical-align: middle
+}
+
+.yplayer .yplayer-info .yplayer-controller .yplayer-time .yplayer-icon {
+    cursor: pointer;
+    transition: all .2s ease
+}
+
+.yplayer .yplayer-info .yplayer-controller .yplayer-time .yplayer-icon path {
+    fill: #666
+}
+
+.yplayer .yplayer-info .yplayer-controller .yplayer-time .yplayer-icon.yplayer-icon-loop {
+    margin-right: 2px
+}
+
+.yplayer .yplayer-info .yplayer-controller .yplayer-time .yplayer-icon:hover path {
+    fill: #000
+}
+
+.yplayer .yplayer-info .yplayer-controller .yplayer-time .yplayer-icon.yplayer-icon-menu,
+.yplayer .yplayer-info .yplayer-controller .yplayer-time.yplayer-time-narrow .yplayer-icon-menu,
+.yplayer .yplayer-info .yplayer-controller .yplayer-time.yplayer-time-narrow .yplayer-icon-mode {
+    display: none
+}
+
+.yplayer .yplayer-info .yplayer-controller .yplayer-volume-wrap {
+    position: relative;
+    display: inline-block;
+    margin-left: 3px;
+    cursor: pointer!important
+}
+
+.yplayer .yplayer-info .yplayer-controller .yplayer-volume-wrap:hover .yplayer-volume-bar-wrap {
+    height: 40px
+}
+
+.yplayer .yplayer-info .yplayer-controller .yplayer-volume-wrap .yplayer-volume-bar-wrap {
+    position: absolute;
+    bottom: 15px;
+    right: -3px;
+    width: 25px;
+    height: 0;
+    z-index: 99;
+    overflow: hidden;
+    transition: all .2s ease-in-out
+}
+
+.yplayer .yplayer-info .yplayer-controller .yplayer-volume-wrap .yplayer-volume-bar-wrap.yplayer-volume-bar-wrap-active {
+    height: 40px
+}
+
+.yplayer .yplayer-info .yplayer-controller .yplayer-volume-wrap .yplayer-volume-bar-wrap .yplayer-volume-bar {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    width: 5px;
+    height: 35px;
+    background: #aaa;
+    border-radius: 2.5px;
+    overflow: hidden
+}
+
+.yplayer .yplayer-info .yplayer-controller .yplayer-volume-wrap .yplayer-volume-bar-wrap .yplayer-volume-bar .yplayer-volume {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 5px;
+    transition: all .1s ease
+}
+
+.yplayer .yplayer-info .yplayer-controller .yplayer-loading-icon {
+    display: none
+}
+
+.yplayer .yplayer-info .yplayer-controller .yplayer-loading-icon svg {
+    position: absolute;
+    -webkit-animation: rotate 1s linear infinite;
+    animation: rotate 1s linear infinite
+}
+
+.yplayer .yplayer-lrc {
+    display: none;
+    position: relative;
+    height: 30px;
+    text-align: center;
+    overflow: hidden;
+    margin: -10px 0 7px
+}
+
+.yplayer .yplayer-lrc:before {
+    top: 0;
+    height: 10%;
+    background: linear-gradient(180deg, #fff 0, hsla(0, 0%, 100%, 0));
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#00ffffff", GradientType=0)
+}
+
+.yplayer .yplayer-lrc:after,
+.yplayer .yplayer-lrc:before {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    content: " "
+}
+
+.yplayer .yplayer-lrc:after {
+    bottom: 0;
+    height: 33%;
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 0, hsla(0, 0%, 100%, .8));
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#00ffffff", endColorstr="#ccffffff", GradientType=0)
+}
+
+.yplayer .yplayer-lrc p {
+    font-size: 12px;
+    color: #666;
+    line-height: 16px!important;
+    height: 16px!important;
+    padding: 0!important;
+    margin: 0!important;
+    transition: all .5s ease-out;
+    opacity: .4;
+    overflow: hidden
+}
+
+.yplayer .yplayer-lrc p.yplayer-lrc-current {
+    opacity: 1;
+    overflow: visible;
+    height: auto!important;
+    min-height: 16px
+}
+
+.yplayer .yplayer-lrc.yplayer-lrc-hide {
+    display: none
+}
+
+.yplayer .yplayer-lrc .yplayer-lrc-contents {
+    width: 100%;
+    transition: all .5s ease-out;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    cursor: default
+}
+
+.yplayer .yplayer-list {
+    overflow: auto;
+    transition: all .5s ease;
+    will-change: height;
+    display: none;
+    overflow: hidden
+}
+
+.yplayer .yplayer-list.yplayer-list-hide {
+    max-height: 0!important
+}
+
+.yplayer .yplayer-list ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto
+}
+
+.yplayer .yplayer-list ol::-webkit-scrollbar {
+    width: 5px
+}
+
+.yplayer .yplayer-list ol::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: #eee
+}
+
+.yplayer .yplayer-list ol::-webkit-scrollbar-thumb:hover {
+    background-color: #ccc
+}
+
+.yplayer .yplayer-list ol li {
+    position: relative;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 15px;
+    font-size: 12px;
+    border-top: 1px solid #e9e9e9;
+    cursor: pointer;
+    transition: all .2s ease;
+    overflow: hidden;
+    margin: 0
+}
+
+.yplayer .yplayer-list ol li:first-child {
+    border-top: none
+}
+
+.yplayer .yplayer-list ol li:hover {
+    background: #efefef
+}
+
+.yplayer .yplayer-list ol li.yplayer-list-light {
+    background: #e9e9e9
+}
+
+.yplayer .yplayer-list ol li.yplayer-list-light .yplayer-list-cur {
+    display: inline-block
+}
+
+.yplayer .yplayer-list ol li .yplayer-list-cur {
+    display: none;
+    width: 3px;
+    height: 22px;
+    position: absolute;
+    left: 0;
+    top: 5px;
+    cursor: pointer
+}
+
+.yplayer .yplayer-list ol li .yplayer-list-index {
+    color: #666;
+    margin-right: 12px;
+    cursor: pointer
+}
+
+.yplayer .yplayer-list ol li .yplayer-list-author {
+    color: #666;
+    float: right;
+    cursor: pointer
+}
+
+.yplayer .yplayer-notice {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    border-radius: 4px;
+    padding: 5px 10px;
+    transition: all .3s ease-in-out;
+    overflow: hidden;
+    color: #fff;
+    pointer-events: none;
+    background-color: #f4f4f5;
+    color: #909399
+}
+
+.yplayer .yplayer-miniswitcher {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background: #e6e6e6;
+    width: 18px;
+    border-radius: 0 2px 2px 0
+}
+
+.yplayer .yplayer-miniswitcher .yplayer-icon {
+    height: 100%;
+    width: 100%;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    transition: all .3s ease
+}
+
+.yplayer .yplayer-miniswitcher .yplayer-icon path {
+    fill: #666
+}
+
+.yplayer .yplayer-miniswitcher .yplayer-icon:hover path {
+    fill: #000
+}
+
+@-webkit-keyframes yplayer-roll {
+    0% {
+        left: 0
+    }
+    to {
+        left: -100%
+    }
+}
+
+@keyframes yplayer-roll {
+    0% {
+        left: 0
+    }
+    to {
+        left: -100%
+    }
+}
+
+@-webkit-keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+
+/*# sourceMappingURL=yplayer.min.css.map*/
