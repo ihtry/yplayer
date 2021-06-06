@@ -1,6 +1,6 @@
 ## 欢迎使用yplayer网页音乐播放器插件
 
-一行js代码接入您的网站，无需安装,官方地址->[yplayer.try.cx](yplayer.try.cx)
+一行js代码接入您的网站，无需安装,官方地址->[yplayer.try.cx](https://yplayer.try.cx)
 
 ### 开始使用
 
