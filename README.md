@@ -1,2 +1,2 @@
 # yplayer
-A muisc plugin for web
+A muisc player for web
