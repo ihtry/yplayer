@@ -12,12 +12,15 @@ git clone https://github.com/apiboys/yplayer.git
 
 #### 引入js和css文件
 
+```markdown
 <!--引入css-->
 <link rel="stylesheet" href="Source/Skin/yplayer.min.css">
 <!--引入js-->
-<script src="Source/Skin/yplayer.min.js"></script>
+<script src="Source/Skin/yplayer.min.js"></script>
 <!--引入音乐数据文件-->
 <script src="Source/music.js"></script>
+
+```
 ##### 修改音乐数据
 
 - Music
